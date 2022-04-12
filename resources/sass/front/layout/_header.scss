@@ -1,0 +1,138 @@
+/*====================
+========HEADER========
+======================*/
+
+.header-container{
+    display: flex;
+    height: 10vh;
+    justify-content:space-between;
+}
+
+.header-2-col{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*====================
+========LOGO==========
+======================*/
+
+.title{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo{
+    margin: 0.5em 0 0 0;
+}
+
+.logo svg{
+    height: 5em;
+    width: 5em;
+}
+
+.logo svg path{
+    fill:hsl(0, 100%, 50%);
+}
+
+.hamburguer{
+    display:none;
+}
+
+/*====================
+========MENU==========
+======================*/
+
+.menu{
+    display: flex;
+    margin: 0;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu ul li{
+    background-color: hsl(0, 100%, 50%);
+    border-style: none;
+    border-radius: 1em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    margin: auto 0.5em;
+}
+
+.menu a{
+    color: hsl(0, 0%, 100%);
+}
+
+.menu ul li:hover{
+    background-color: hsl(0, 87%, 28%);
+    cursor: pointer;
+}
+
+/*====================
+==OTROS DISPOSITIVOS==
+======================*/
+
+@media (max-width:479px) {
+    
+    .menu{
+        display: flex;
+        margin: 0;
+    }
+
+    .menu ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    .menu ul li{
+        background-color: hsl(0, 100%, 50%);
+        border-style: none;
+        border-radius: 1em;
+        font-weight: 600;
+        padding: 0.5em 1em;
+        margin: auto 0.5em;
+    }
+
+    .menu a{
+        color: hsl(0, 0%, 100%);
+    }
+
+    .menu ul li:hover{
+        background-color: hsl(0, 87%, 28%);
+        cursor: pointer;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo svg{
+        margin: 0;
+        height: 3em;
+        width: 3em;
+    }
+
+    .hamburguer, .hamburguer svg{
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .hamburguer svg path{
+        fill:hsl(0, 100%, 50%);
+    }
+
+    .menu{
+        display: none;
+    }
+}

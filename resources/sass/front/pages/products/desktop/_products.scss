@@ -1,0 +1,104 @@
+/*====================
+==PRODUCTS ELEMENTS===
+======================*/
+.products-aside p, .page p {
+    color: #e6e6e6;
+    margin: 0.5em;
+  }
+  
+  .products-header option {
+    text-align: center;
+  }
+  
+  #categories-selected {
+    color: maroon;
+  }
+  
+  button a {
+    color: white;
+  }
+  
+  /*====================
+  ==PRODUCTS MAIN=======
+  ======================*/
+  .products-container {
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 80vh;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  .products-aside {
+    width: 20%;
+    height: 70vh;
+    z-index: 1001;
+    position: absolute;
+    top: 5%;
+    padding: 1em;
+  }
+  
+  .products-categories {
+    border-radius: 1em;
+    background-color: rgba(48, 48, 48, 0.5);
+    width: 100%;
+    height: 40vh;
+    z-index: 1001;
+    padding: 0.5em;
+  }
+  
+  .products-gallery {
+    width: 74%;
+    height: 70vh;
+    z-index: 1001;
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .gallery-header {
+    border-radius: 1em;
+    background-color: rgba(48, 48, 48, 0.5);
+    width: 100%;
+    height: 4vh;
+    z-index: 1002;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .gallery-main {
+    width: 100%;
+    height: 65vh;
+    z-index: 1002;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .desktop-col-3 {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .products-course {
+    border-radius: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: white;
+  }
+  
+  .products-course-image {
+    width: 45%;
+  }
