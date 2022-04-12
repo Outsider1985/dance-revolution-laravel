@@ -1,4 +1,4 @@
-import JustValidate from '../../node_modules/just-validate/dist/just-validate.es.js';
+import JustValidate from 'just-validate';
 
 export let validator = (form) => {
 
