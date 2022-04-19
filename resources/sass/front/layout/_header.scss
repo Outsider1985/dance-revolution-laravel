@@ -37,7 +37,7 @@
     fill:hsl(0, 100%, 50%);
 }
 
-.hamburguer{
+#hamburguer{
     display:none;
 }
 
@@ -122,13 +122,13 @@
         width: 3em;
     }
 
-    .hamburguer, .hamburguer svg{
+    #hamburguer, #hamburguer svg{
         display: block;
         width: 1.5em;
         height: 1.5em;
     }
 
-    .hamburguer svg path{
+    #hamburguer svg path{
         fill:hsl(0, 100%, 50%);
     }
 

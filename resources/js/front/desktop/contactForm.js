@@ -8,22 +8,33 @@ export let form = () => {
   
   sendButton.addEventListener("click" , () => {
 
-    let data = new FormData(form);
     let validation = validator(form);
   
     validation.onSuccess(() => {
 
-      console.log('FORM SUBMITTED!');
+      let data = new FormData(form);
 
+      //Condicional de valor no nulo para agregarlos al array de comentarios.
+      if( ckeditors != 'null'){
+          //Agregamos los comentarios y sus etiquetas de atributo name a cada posición del array con append()
+          Object.entries(ckeditors).forEach(([key, value]) => {
+              data.append(key, value.getData());
+          });
+      }
+
+      //imprimimos en consola todos los datos del formulario.
       for (var pair of data.entries()) {
         console.log(pair[0]+ ', ' + pair[1]); 
       }
 
+      //llamamos a la función que crea un mensaje de éxito.
       popup('success', 'Mensaje enviado correctamente');
+      
     });
 
     validation.onFail( () => {
 
+      ////llamamos a la función que crea un mensaje de fracaso.
       popup('error', 'Revise el formulario');
     
     });

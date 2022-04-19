@@ -17,10 +17,10 @@
         </div>
         <div class="menu" id="menubar">
             <ul>
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="products.html">Cursos</a></li>
-                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/productos">Cursos</a></li>
+                <li><a href="/carrito">Carrito</a></li>
             </ul>
         </div>
     </div>

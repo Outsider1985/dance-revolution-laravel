@@ -22,7 +22,7 @@
             </div>
             <div class="form-comment">
                 <textarea type="text" name="comment"  class="ckeditor" placeholder="Escribe tu comentario"></textarea>
-            </div>       
+            </div>     
         </div>
     </div>
     <div class="form-element">

@@ -39,7 +39,7 @@
                             <button id="minus">-</button>
                         </div>
                     </div>
-                    <button class="slider-form-button"><a href="cart.html">RESERVAR</a></button>
+                    <button class="slider-form-button"><a href="/carrito">RESERVAR</a></button>
                 </div>
             </div>
 @endsection

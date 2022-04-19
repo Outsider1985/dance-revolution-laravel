@@ -31,7 +31,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO BACHATA</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="/producto">RESERVAR</a></button>
                                 </div>
                             </div>
                             <div class="products-course">
@@ -39,7 +39,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO BALLET</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                             <div class="products-course">
@@ -47,7 +47,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO FLAMENCO</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO KIZOMBA</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                             <div class="products-course">
@@ -65,7 +65,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO MERENGUE</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                             <div class="products-course">
@@ -73,7 +73,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO SALSA</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO SEVILLANA</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                             <div class="products-course">
@@ -91,7 +91,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO TANGO</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>
                             <div class="products-course">
@@ -99,7 +99,7 @@
                                 <div class="products-course-title"><p>CURSO INICIO URBAN</p></div>
                                 <div class="products-course-price"><p>PRECIO: 9€/HORA</p></div>
                                 <div class="products-course-button">
-                                    <button class="slider-form-button"><a href="product.html">RESERVAR</a></button>
+                                    <button class="slider-form-button"><a href="">RESERVAR</a></button>
                                 </div>
                             </div>            
                         </div>

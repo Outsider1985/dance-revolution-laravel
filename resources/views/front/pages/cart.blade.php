@@ -26,6 +26,6 @@
                         <div class="cart-remove"><button>Remove</button></div>
                     </div>
                 </div>
-                <button class="slider-form-button"><a href="checkout.html">CHECK-OUT</a></button>
+                <button class="slider-form-button"><a href="/checkout">CHECK-OUT</a></button>
             </div>
 @endsection
