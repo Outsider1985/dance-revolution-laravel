@@ -1,4 +1,4 @@
-<form class="form-container" id="contact-form" action="/users/create" autocomplete="off">
+<form class="form-container front-form" id="contact-form" action="/users/create" autocomplete="off">
     <div class="form-element">
         <div class="form-label">
             <label for="name">Inscríbete!</label>

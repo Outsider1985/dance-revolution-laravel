@@ -2294,44 +2294,46 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var form = function form() {
   var sendButton = document.getElementById("send-button");
-  var form = document.getElementById("contact-form");
+  var forms = document.querySelectorAll(".front-form");
   sendButton.addEventListener("click", function () {
-    var validation = (0,_validation_js__WEBPACK_IMPORTED_MODULE_0__.validator)(form);
-    validation.onSuccess(function () {
-      var data = new FormData(form); //Condicional de valor no nulo para agregarlos al array de comentarios.
+    forms.forEach(function (form) {
+      var validation = (0,_validation_js__WEBPACK_IMPORTED_MODULE_0__.validator)(form);
+      validation.onSuccess(function () {
+        var data = new FormData(form); //Condicional de valor no nulo para agregarlos al array de comentarios.
 
-      if (ckeditors != 'null') {
-        //Agregamos los comentarios y sus etiquetas de atributo name a cada posición del array con append()
-        Object.entries(ckeditors).forEach(function (_ref) {
-          var _ref2 = _slicedToArray(_ref, 2),
-              key = _ref2[0],
-              value = _ref2[1];
+        if (ckeditors != 'null') {
+          //Agregamos los comentarios y sus etiquetas de atributo name a cada posición del array con append()
+          Object.entries(ckeditors).forEach(function (_ref) {
+            var _ref2 = _slicedToArray(_ref, 2),
+                key = _ref2[0],
+                value = _ref2[1];
 
-          data.append(key, value.getData());
-        });
-      } //imprimimos en consola todos los datos del formulario.
+            data.append(key, value.getData());
+          });
+        } //imprimimos en consola todos los datos del formulario.
 
 
-      var _iterator = _createForOfIteratorHelper(data.entries()),
-          _step;
+        var _iterator = _createForOfIteratorHelper(data.entries()),
+            _step;
 
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var pair = _step.value;
-          console.log(pair[0] + ', ' + pair[1]);
-        } //llamamos a la función que crea un mensaje de éxito.
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var pair = _step.value;
+            console.log(pair[0] + ', ' + pair[1]);
+          } //llamamos a la función que crea un mensaje de éxito.
 
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
 
-      (0,_popup_js__WEBPACK_IMPORTED_MODULE_1__.popup)('success', 'Mensaje enviado correctamente');
-    });
-    validation.onFail(function () {
-      ////llamamos a la función que crea un mensaje de fracaso.
-      (0,_popup_js__WEBPACK_IMPORTED_MODULE_1__.popup)('error', 'Revise el formulario');
+        (0,_popup_js__WEBPACK_IMPORTED_MODULE_1__.popup)('success', 'Mensaje enviado correctamente');
+      });
+      validation.onFail(function () {
+        ////llamamos a la función que crea un mensaje de fracaso.
+        (0,_popup_js__WEBPACK_IMPORTED_MODULE_1__.popup)('error', 'Revise el formulario');
+      });
     });
   });
 };

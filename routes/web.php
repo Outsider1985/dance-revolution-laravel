@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/admin/users', function () {
+    return view('admin.pages.users');
+});
+
+Route::get('/admin/login', function () {
+    return view('admin.pages.login');
+});
+
 Route::get('/', function () {
     return view('front.pages.home');
 });
