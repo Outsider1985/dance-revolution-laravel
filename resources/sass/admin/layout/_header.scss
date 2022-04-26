@@ -1,0 +1,193 @@
+/*====================
+========HEADER========
+======================*/
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    height: 14vh;
+    justify-content:space-between;
+    background-color: hsl(0, 0%, 80%);
+}
+
+.header-2-col{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-up{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-button{
+    height: 4vh;
+    background-color: hsl(0, 0%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-button svg{
+    height: 1.5em;
+    width: 1.5em;
+    color: hsl(0, 100%, 40%);
+}
+
+.filter-button svg:hover{
+    color: hsl(0, 100%, 20%);
+    cursor: pointer;
+}
+
+/*====================
+========LOGO==========
+======================*/
+
+.title{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo{
+    margin: 0.5em 0 0 0;
+}
+
+.logo svg{
+    height: 5em;
+    width: 5em;
+}
+
+.logo svg path{
+    fill:hsl(0, 100%, 50%);
+}
+
+#hamburguer{
+    margin: 1em;
+    height: 2em;
+    width: 2em;
+}
+
+#hamburguer svg{
+    height: 2em;
+    width: 2em;
+    color: hsl(0, 100%, 40%);
+}
+
+#hamburguer svg:hover{
+    color: hsl(0, 100%, 20%);
+    cursor: pointer;
+}
+
+
+/*====================
+========MENU==========
+======================*/
+
+.menu{
+    position: absolute;
+    top: -100vh;
+    right: 10em;
+    margin: 0;
+    width: 20em;
+    opacity: 0;
+    transition: all 0.5s;
+
+    &.active{
+        top: 1rem;
+        transition: all 0.5s;
+        opacity: 1;
+    }
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+}
+
+.menu ul li{
+    background-color: hsl(0, 100%, 50%);
+    border-bottom: solid 0.1em white;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    margin: auto 0.5em;
+    width: 100%;
+}
+
+.menu a{
+    color: hsl(0, 0%, 100%);
+}
+
+.menu ul li:hover{
+    background-color: hsl(0, 87%, 28%);
+    cursor: pointer;
+}
+
+/*====================
+==OTROS DISPOSITIVOS==
+======================*/
+
+@media (max-width:479px) {
+    
+    .menu{
+        display: flex;
+        margin: 0;
+    }
+
+    .menu ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    .menu ul li{
+        background-color: hsl(0, 100%, 50%);
+        border-style: none;
+        border-radius: 1em;
+        font-weight: 600;
+        padding: 0.5em 1em;
+        margin: auto 0.5em;
+    }
+
+    .menu a{
+        color: hsl(0, 0%, 100%);
+    }
+
+    .menu ul li:hover{
+        background-color: hsl(0, 87%, 28%);
+        cursor: pointer;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo svg{
+        margin: 0;
+        height: 3em;
+        width: 3em;
+    }
+
+    #hamburguer, #hamburguer svg{
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #hamburguer svg path{
+        fill:hsl(0, 100%, 50%);
+    }
+
+    .menu{
+        display: none;
+    }
+}

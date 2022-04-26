@@ -1,0 +1,296 @@
+.admin-users-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 76vh;
+    width: 100%;
+}
+
+//USERS TABLE
+
+.users-container{
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+}
+
+.users-table{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.user-element{
+    background-color: hsl(60, 56%, 91%);
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 0.1em hsl(0, 0%, 80%) solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-buttons svg {
+    color: hsl(0, 100%, 40%);
+}
+
+.user-buttons svg:hover{
+    color: hsl(0, 100%, 20%);
+    cursor: pointer;
+}
+
+.users-page-navigator{
+    display: flex;
+    flex-direction: column;
+}
+
+.users-page{
+    display: flex;
+    justify-content: space-between;
+}
+
+.users-page p{
+    width: fit-content;
+}
+
+.users-page-navigation-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.users-page-navigation-buttons span{
+    color: hsl(0, 100%, 40%);
+}
+
+.users-page-navigation-buttons span:hover{
+    color: hsl(0, 100%, 20%);
+    cursor: pointer;
+}
+
+//USERS FORM
+
+.admin-form{
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    width: 66%;
+}
+
+.form-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 90%);
+    margin-top: 0.5em;
+}
+
+.form-tabs{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-tab{
+    padding: 1em;
+    background-color: hsl(0, 0%, 70%);
+}
+
+.form-tab:hover{
+    background-color: hsl(0, 100%, 20%);
+    color: white;
+    cursor: pointer;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.form-buttons svg{
+    margin-right: 0.5em;
+    color: hsl(0, 100%, 40%);
+}
+
+.form-buttons svg:hover{
+    color: hsl(0, 100%, 20%);
+    cursor: pointer;
+}
+
+//FORM INPUT
+
+.form-input{
+    background-color: hsl(0, 0%, 90%);
+    margin-top: 0.5em;
+    padding: 1em;
+}
+
+.form-item input{
+    margin: 1em auto;
+    width: 100%;
+}
+
+.ck-editor__editable{
+    height: 20vh !important;
+}
+
+/*ERRORS CONTACT FORM*/
+
+.just-validate-error-label{
+    font-size: 1.2rem; 
+    color: #dc3545 !important;
+  }
+  
+  #popup-valid-form{
+    position: absolute;
+    z-index: 5000;
+    top: 80%;
+    left: 70%;
+    width: 20%;
+    padding: 2em;
+    opacity: 0;
+    text-align: center;
+    color: hsl(34, 78%, 91%);
+  }
+  
+  #popup-valid-form.success{
+    background-color: #014910;
+  }
+  
+  #popup-valid-form.error{
+    background-color: #860909;
+  }
+  
+  .popup_is_active{
+    opacity: 0.8 !important;
+    transition: 2s !important;
+  }
+
+  /*TABS*/
+
+.tab-content{
+    display: none;
+  }
+  
+.is_selected{
+    background-color: hsl(0, 100%, 20%);
+    color: white;    
+    transition: 1s;
+  }
+
+  .is_active{
+    display:block;
+  }
+
+  /*DELETE WARNING*/
+
+  .delete-warning{
+      position: absolute;
+      //top: 40vh; cuando está activo.
+      top: -100vh;
+      right: 35%;
+      width: 30%;
+      height: 10vh;
+      background-color: #dc3545;
+      opacity: 0.9;
+      color: white;
+      text-align: center;
+      line-height: 10vh;
+      z-index: 5000;
+  }
+
+  .delete-warning.is_active{
+      
+  }
+
+  /*ON-OFF BUTTON*/
+
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    position: relative;
+    top: 20%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .button.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  .button.b2 {
+    border-radius: 2px;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: hsl(0, 0%, 95%);
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+
+#button-1 .knobs:before {
+    content: "NO";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: hsl(0, 0%, 63%);
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  }
+  
+  #button-1 .checkbox:checked + .knobs:before {
+    content: "SI";
+    left: 42px;
+    background-color: hsl(0, 100%, 35%);
+  }
+  
+  #button-1 .checkbox:checked ~ .layer {
+    background-color: hsl(0, 74%, 95%);
+  }
+  
+  #button-1 .knobs,
+  #button-1 .knobs:before,
+  #button-1 .layer {
+    transition: 0.3s ease all;
+  }

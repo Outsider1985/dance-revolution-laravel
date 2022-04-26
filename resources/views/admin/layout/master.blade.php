@@ -20,6 +20,5 @@
 
         @include('admin.layout.partials.footer')
         @include('admin.layout.partials.js')
-
     </body>
 </html>
