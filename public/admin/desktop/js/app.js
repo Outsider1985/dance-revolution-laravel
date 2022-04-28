@@ -2239,6 +2239,52 @@ var ckeditor = function ckeditor() {
 
 /***/ }),
 
+/***/ "./resources/js/admin/desktop/deleteBtn.js":
+/*!*************************************************!*\
+  !*** ./resources/js/admin/desktop/deleteBtn.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "elementDelete": () => (/* binding */ elementDelete)
+/* harmony export */ });
+var elementDelete = function elementDelete() {
+  var deleteButton = document.getElementById("delete-button");
+  var deleteWarningBox = document.getElementById("delete-warning-box");
+  var deleteConfirmationButton = document.getElementById("cancel-button");
+  deleteButton.addEventListener("click", function () {
+    deleteWarningBox.classList.add("is_displayed");
+  });
+  deleteConfirmationButton.addEventListener("click", function () {
+    deleteWarningBox.classList.remove("is_displayed");
+  });
+};
+
+/***/ }),
+
+/***/ "./resources/js/admin/desktop/filterBtn.js":
+/*!*************************************************!*\
+  !*** ./resources/js/admin/desktop/filterBtn.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "filter": () => (/* binding */ filter)
+/* harmony export */ });
+var filter = function filter() {
+  var filterButton = document.getElementById("filter-button");
+  var filterMenu = document.getElementById("filter-menu");
+  filterButton.addEventListener("click", function () {
+    filterMenu.classList.toggle("is_shown");
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/admin/desktop/form.js":
 /*!********************************************!*\
   !*** ./resources/js/admin/desktop/form.js ***!
@@ -19934,12 +19980,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _desktop_tabBtns_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./desktop/tabBtns.js */ "./resources/js/admin/desktop/tabBtns.js");
 /* harmony import */ var _desktop_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./desktop/form.js */ "./resources/js/admin/desktop/form.js");
 /* harmony import */ var _desktop_ckeditor_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./desktop/ckeditor.js */ "./resources/js/admin/desktop/ckeditor.js");
+/* harmony import */ var _desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./desktop/deleteBtn.js */ "./resources/js/admin/desktop/deleteBtn.js");
+/* harmony import */ var _desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./desktop/filterBtn.js */ "./resources/js/admin/desktop/filterBtn.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 
 
 
 
+
+
+(0,_desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_5__.filter)();
+(0,_desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__.elementDelete)();
 (0,_desktop_plusMinusBtns_js__WEBPACK_IMPORTED_MODULE_0__.plusMinusBtns)();
 (0,_desktop_tabBtns_js__WEBPACK_IMPORTED_MODULE_1__.tabBtns)();
 (0,_desktop_form_js__WEBPACK_IMPORTED_MODULE_2__.form)();

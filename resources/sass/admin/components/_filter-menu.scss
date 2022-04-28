@@ -1,0 +1,44 @@
+/*FILTER MENU*/
+
+#filter-button{
+    height: 4vh;
+    background-color: hsl(0, 0%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter-button svg{
+    height: 1.5em;
+    width: 1.5em;
+    color: hsl(0, 100%, 40%);
+}
+
+#filter-button svg:hover{
+    color: hsl(0, 100%, 20%);
+    cursor: pointer;
+}
+
+#filter-menu{
+    position: absolute;
+    top: 13vh;
+    width: 90%;
+    height: 0;
+    background-color: hsl(0, 0%, 70%);
+    transition: all 1s !important;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#filter-form input{
+    margin: 1em 1em;
+    width: 90%;
+}
+
+/*Click on filter button activates new styles*/
+
+.is_shown{
+    height: 30vh !important;
+    transition: all 1s !important;
+    z-index: 5000 !important;
+}

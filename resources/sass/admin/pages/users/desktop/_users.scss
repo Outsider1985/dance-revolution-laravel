@@ -1,4 +1,4 @@
-.admin-users-container{
+.admin-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,23 +6,23 @@
     width: 100%;
 }
 
-//USERS TABLE
+/*USERS TABLE*/
 
-.users-container{
-    height: 76vh;
+.table-container{
+    height: 68vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 33%;
 }
 
-.users-table{
+.table{
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
 }
 
-.user-element{
+.table-element{
     background-color: hsl(60, 56%, 91%);
     padding: 0.5em;
     margin: 0.5em;
@@ -32,45 +32,47 @@
     justify-content: space-between;
 }
 
-.user-buttons svg {
+.table-buttons svg {
     color: hsl(0, 100%, 40%);
 }
 
-.user-buttons svg:hover{
+.table-buttons svg:hover{
     color: hsl(0, 100%, 20%);
     cursor: pointer;
 }
 
-.users-page-navigator{
+.page-navigator{
     display: flex;
     flex-direction: column;
 }
 
-.users-page{
+.page{
+  margin: 0 0.5em;
     display: flex;
     justify-content: space-between;
 }
 
-.users-page p{
+.page p{
     width: fit-content;
 }
 
-.users-page-navigation-buttons{
+.page-navigation-buttons{
+    padding: 0 0.5em;
     display: flex;
     justify-content: space-between;
     margin: 0.5em 0 0.5em 0;
 }
 
-.users-page-navigation-buttons span{
+.page-navigation-buttons span{
     color: hsl(0, 100%, 40%);
 }
 
-.users-page-navigation-buttons span:hover{
+.page-navigation-buttons span:hover{
     color: hsl(0, 100%, 20%);
     cursor: pointer;
 }
 
-//USERS FORM
+/*USERS FORM*/
 
 .admin-form{
     height: 76vh;
@@ -123,9 +125,9 @@
     cursor: pointer;
 }
 
-//FORM INPUT
+/*FORM INPUT*/
 
-.form-input{
+.form-users{
     background-color: hsl(0, 0%, 90%);
     margin-top: 0.5em;
     padding: 1em;
@@ -137,7 +139,7 @@
 }
 
 .ck-editor__editable{
-    height: 20vh !important;
+    height: 21vh !important;
 }
 
 /*ERRORS CONTACT FORM*/
@@ -190,107 +192,29 @@
 
   /*DELETE WARNING*/
 
-  .delete-warning{
-      position: absolute;
-      //top: 40vh; cuando está activo.
-      top: -100vh;
-      right: 35%;
-      width: 30%;
-      height: 10vh;
-      background-color: #dc3545;
-      opacity: 0.9;
-      color: white;
-      text-align: center;
-      line-height: 10vh;
-      z-index: 5000;
-  }
-
-  .delete-warning.is_active{
-      
-  }
-
-  /*ON-OFF BUTTON*/
-
-  .button-cover,
-  .knobs,
-  .layer {
+  .delete-warning-box{
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .button {
-    position: relative;
-    top: 20%;
-    width: 74px;
-    height: 36px;
-    margin: -20px auto 0 auto;
-    overflow: hidden;
-  }
-  
-  .button.r,
-  .button.r .layer {
-    border-radius: 100px;
-  }
-  
-  .button.b2 {
-    border-radius: 2px;
-  }
-  
-  .checkbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+    //top: 40vh; cuando está activo.
+    top: 40vh;
+    right: 35%;
+    width: 30%;
+    height: 12vh;
+    background-color: #dc3545;
     opacity: 0;
-    cursor: pointer;
-    z-index: 3;
-  }
-  
-  .knobs {
-    z-index: 2;
-  }
-  
-  .layer {
-    width: 100%;
-    background-color: hsl(0, 0%, 95%);
-    transition: 0.3s ease all;
-    z-index: 1;
+    color: white;
+    text-align: center;
+    line-height: 5vh;
+    z-index: -1;
+
+    button{
+      cursor: pointer;
+    }
   }
 
-#button-1 .knobs:before {
-    content: "NO";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 20px;
-    height: 10px;
-    color: hsl(0, 0%, 100%);
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-    padding: 9px 4px;
-    background-color: hsl(0, 0%, 63%);
-    border-radius: 50%;
-    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
-  }
-  
-  #button-1 .checkbox:checked + .knobs:before {
-    content: "SI";
-    left: 42px;
-    background-color: hsl(0, 100%, 35%);
-  }
-  
-  #button-1 .checkbox:checked ~ .layer {
-    background-color: hsl(0, 74%, 95%);
-  }
-  
-  #button-1 .knobs,
-  #button-1 .knobs:before,
-  #button-1 .layer {
-    transition: 0.3s ease all;
+  .is_displayed{
+    opacity: 0.9;
+    transition: all 1s;
+    z-index: 5000;
   }

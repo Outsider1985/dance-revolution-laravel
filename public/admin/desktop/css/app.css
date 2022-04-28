@@ -487,25 +487,6 @@ footer {
   align-items: center;
 }
 
-.filter-button {
-  height: 4vh;
-  background-color: hsl(0deg, 0%, 70%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.filter-button svg {
-  height: 1.5em;
-  width: 1.5em;
-  color: hsl(0deg, 100%, 40%);
-}
-
-.filter-button svg:hover {
-  color: hsl(0deg, 100%, 20%);
-  cursor: pointer;
-}
-
 /*====================
 ========LOGO==========
 ======================*/
@@ -529,6 +510,7 @@ footer {
   fill: hsl(0deg, 100%, 50%);
 }
 
+/* HAMBURGUER */
 #hamburguer {
   margin: 1em;
   height: 2em;
@@ -547,7 +529,7 @@ footer {
 }
 
 /*====================
-========MENU==========
+===HAMBURGUER MENU====
 ======================*/
 .menu {
   position: absolute;
@@ -729,234 +711,8 @@ footer {
 }
 
 /*====================
-=========BUTTON=======
+==FEATURED BUTTON=====
 ======================*/
-.slider-form-button {
-  background-image: linear-gradient(to right, hsl(0deg, 57%, 34%) 0%, hsl(0deg, 98%, 35%) 50%, hsl(0deg, 57%, 34%) 100%);
-  background-size: 200% auto;
-  border-radius: 1em;
-  border: none;
-  color: hsl(0deg, 0%, 100%);
-  cursor: pointer;
-  font-size: 1.2em;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 0px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1em 2em;
-  transition: 0.5s;
-  text-decoration: none;
-}
-
-.slider-form-button:hover {
-  background-size: 100% auto;
-}
-
-.slider-form-button:focus {
-  outline: 0;
-}
-
-.admin-users-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 76vh;
-  width: 100%;
-}
-
-.users-container {
-  height: 76vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 33%;
-}
-
-.users-table {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.user-element {
-  background-color: hsl(60deg, 56%, 91%);
-  padding: 0.5em;
-  margin: 0.5em;
-  border: 0.1em hsl(0deg, 0%, 80%) solid;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.user-buttons svg {
-  color: hsl(0deg, 100%, 40%);
-}
-
-.user-buttons svg:hover {
-  color: hsl(0deg, 100%, 20%);
-  cursor: pointer;
-}
-
-.users-page-navigator {
-  display: flex;
-  flex-direction: column;
-}
-
-.users-page {
-  display: flex;
-  justify-content: space-between;
-}
-
-.users-page p {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.users-page-navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5em 0 0.5em 0;
-}
-
-.users-page-navigation-buttons span {
-  color: hsl(0deg, 100%, 40%);
-}
-
-.users-page-navigation-buttons span:hover {
-  color: hsl(0deg, 100%, 20%);
-  cursor: pointer;
-}
-
-.admin-form {
-  height: 76vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 66%;
-}
-
-.form-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: hsl(0deg, 0%, 90%);
-  margin-top: 0.5em;
-}
-
-.form-tabs {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.form-tab {
-  padding: 1em;
-  background-color: hsl(0deg, 0%, 70%);
-}
-
-.form-tab:hover {
-  background-color: hsl(0deg, 100%, 20%);
-  color: white;
-  cursor: pointer;
-}
-
-.form-buttons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 0.5em;
-}
-
-.form-buttons svg {
-  margin-right: 0.5em;
-  color: hsl(0deg, 100%, 40%);
-}
-
-.form-buttons svg:hover {
-  color: hsl(0deg, 100%, 20%);
-  cursor: pointer;
-}
-
-.form-input {
-  background-color: hsl(0deg, 0%, 90%);
-  margin-top: 0.5em;
-  padding: 1em;
-}
-
-.form-item input {
-  margin: 1em auto;
-  width: 100%;
-}
-
-.ck-editor__editable {
-  height: 20vh !important;
-}
-
-/*ERRORS CONTACT FORM*/
-.just-validate-error-label {
-  font-size: 1.2rem;
-  color: #dc3545 !important;
-}
-
-#popup-valid-form {
-  position: absolute;
-  z-index: 5000;
-  top: 80%;
-  left: 70%;
-  width: 20%;
-  padding: 2em;
-  opacity: 0;
-  text-align: center;
-  color: hsl(34deg, 78%, 91%);
-}
-
-#popup-valid-form.success {
-  background-color: #014910;
-}
-
-#popup-valid-form.error {
-  background-color: #860909;
-}
-
-.popup_is_active {
-  opacity: 0.8 !important;
-  transition: 2s !important;
-}
-
-/*TABS*/
-.tab-content {
-  display: none;
-}
-
-.is_selected {
-  background-color: hsl(0deg, 100%, 20%);
-  color: white;
-  transition: 1s;
-}
-
-.is_active {
-  display: block;
-}
-
-/*DELETE WARNING*/
-.delete-warning {
-  position: absolute;
-  top: -100vh;
-  right: 35%;
-  width: 30%;
-  height: 10vh;
-  background-color: #dc3545;
-  opacity: 0.9;
-  color: white;
-  text-align: center;
-  line-height: 10vh;
-  z-index: 5000;
-}
-
 /*ON-OFF BUTTON*/
 .button-cover,
 .knobs,
@@ -1040,4 +796,262 @@ footer {
 #button-1 .knobs:before,
 #button-1 .layer {
   transition: 0.3s ease all;
+}
+
+/*FILTER MENU*/
+#filter-button {
+  height: 4vh;
+  background-color: hsl(0deg, 0%, 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#filter-button svg {
+  height: 1.5em;
+  width: 1.5em;
+  color: hsl(0deg, 100%, 40%);
+}
+
+#filter-button svg:hover {
+  color: hsl(0deg, 100%, 20%);
+  cursor: pointer;
+}
+
+#filter-menu {
+  position: absolute;
+  top: 13vh;
+  width: 90%;
+  height: 0;
+  background-color: hsl(0deg, 0%, 70%);
+  transition: all 1s !important;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#filter-form input {
+  margin: 1em 1em;
+  width: 90%;
+}
+
+/*Click on filter button activates new styles*/
+.is_shown {
+  height: 30vh !important;
+  transition: all 1s !important;
+  z-index: 5000 !important;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 76vh;
+  width: 100%;
+}
+
+/*USERS TABLE*/
+.table-container {
+  height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33%;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.table-element {
+  background-color: hsl(60deg, 56%, 91%);
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 0.1em hsl(0deg, 0%, 80%) solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table-buttons svg {
+  color: hsl(0deg, 100%, 40%);
+}
+
+.table-buttons svg:hover {
+  color: hsl(0deg, 100%, 20%);
+  cursor: pointer;
+}
+
+.page-navigator {
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  margin: 0 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.page-navigation-buttons {
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.page-navigation-buttons span {
+  color: hsl(0deg, 100%, 40%);
+}
+
+.page-navigation-buttons span:hover {
+  color: hsl(0deg, 100%, 20%);
+  cursor: pointer;
+}
+
+/*USERS FORM*/
+.admin-form {
+  height: 76vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 66%;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: hsl(0deg, 0%, 90%);
+  margin-top: 0.5em;
+}
+
+.form-tabs {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-tab {
+  padding: 1em;
+  background-color: hsl(0deg, 0%, 70%);
+}
+
+.form-tab:hover {
+  background-color: hsl(0deg, 100%, 20%);
+  color: white;
+  cursor: pointer;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0.5em;
+}
+
+.form-buttons svg {
+  margin-right: 0.5em;
+  color: hsl(0deg, 100%, 40%);
+}
+
+.form-buttons svg:hover {
+  color: hsl(0deg, 100%, 20%);
+  cursor: pointer;
+}
+
+/*FORM INPUT*/
+.form-users {
+  background-color: hsl(0deg, 0%, 90%);
+  margin-top: 0.5em;
+  padding: 1em;
+}
+
+.form-item input {
+  margin: 1em auto;
+  width: 100%;
+}
+
+.ck-editor__editable {
+  height: 21vh !important;
+}
+
+/*ERRORS CONTACT FORM*/
+.just-validate-error-label {
+  font-size: 1.2rem;
+  color: #dc3545 !important;
+}
+
+#popup-valid-form {
+  position: absolute;
+  z-index: 5000;
+  top: 80%;
+  left: 70%;
+  width: 20%;
+  padding: 2em;
+  opacity: 0;
+  text-align: center;
+  color: hsl(34deg, 78%, 91%);
+}
+
+#popup-valid-form.success {
+  background-color: #014910;
+}
+
+#popup-valid-form.error {
+  background-color: #860909;
+}
+
+.popup_is_active {
+  opacity: 0.8 !important;
+  transition: 2s !important;
+}
+
+/*TABS*/
+.tab-content {
+  display: none;
+}
+
+.is_selected {
+  background-color: hsl(0deg, 100%, 20%);
+  color: white;
+  transition: 1s;
+}
+
+.is_active {
+  display: block;
+}
+
+/*DELETE WARNING*/
+.delete-warning-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40vh;
+  right: 35%;
+  width: 30%;
+  height: 12vh;
+  background-color: #dc3545;
+  opacity: 0;
+  color: white;
+  text-align: center;
+  line-height: 5vh;
+  z-index: -1;
+}
+.delete-warning-box button {
+  cursor: pointer;
+}
+
+.is_displayed {
+  opacity: 0.9;
+  transition: all 1s;
+  z-index: 5000;
 }

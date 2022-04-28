@@ -12,6 +12,7 @@
     </head>
     
     <body>
+        @include('admin.components.delete-warning')
         @include('admin.layout.partials.header')
 
         <main class="partial main-content">
