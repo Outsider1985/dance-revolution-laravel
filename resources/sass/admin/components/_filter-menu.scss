@@ -14,9 +14,48 @@
     color: hsl(0, 100%, 40%);
 }
 
-#filter-button svg:hover{
-    color: hsl(0, 100%, 20%);
-    cursor: pointer;
+
+
+#filter-button{ 
+
+    svg:hover{
+        color: hsl(0, 100%, 20%);
+        cursor: pointer;
+    }
+
+    .tooltiptext{
+        color: white;
+        width: 60px;
+        height: 35px;
+        background: red;
+        position: relative;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin-left: 9%;
+        position: absolute;
+        visibility: hidden;
+        text-align: center;
+        line-height: 35px;
+    }
+
+    .tooltiptext:before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 12px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 13px solid red;
+        border-bottom: 7px solid transparent;
+    }
+    
+    svg:hover ~ .tooltiptext{
+        visibility: visible !important;
+        z-index: 6000 !important;
+    }
+
 }
 
 #filter-menu{
