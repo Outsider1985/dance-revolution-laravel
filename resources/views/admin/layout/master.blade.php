@@ -15,7 +15,7 @@
         @include('admin.components.delete-warning')
         @include('admin.layout.partials.header')
 
-        <main class="partial main-content">
+        <main class="main-content">
             @yield('content')
         </main>
 

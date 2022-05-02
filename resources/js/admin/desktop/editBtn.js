@@ -1,12 +1,12 @@
-export let elementDelete = () => {
+export let elementEdit = () => {
 
-    let deleteBtns = document.querySelectorAll('.delete-button');
+    let editBtns = document.querySelectorAll('.edit-button');
     let deleteWarningBox = document.getElementById("delete-warning-box");
     let cancelButton = document.getElementById("cancel-button");
 
-    deleteBtns.forEach(deleteBtn => {
+    editBtns.forEach(editBtn => {
 
-        deleteBtn.addEventListener("click", () => {
+        editBtn.addEventListener("click", () => {
 
             deleteWarningBox.classList.add("is_displayed");
 

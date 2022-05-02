@@ -817,33 +817,36 @@ footer {
   color: hsl(0deg, 100%, 20%);
   cursor: pointer;
 }
-#filter-button .tooltiptext {
-  color: white;
-  width: 60px;
-  height: 35px;
-  background: red;
-  position: relative;
-  border-radius: 10px;
-  margin-left: 9%;
-  position: absolute;
-  visibility: hidden;
-  text-align: center;
-  line-height: 35px;
-}
-#filter-button .tooltiptext:before {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 12px;
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-right: 13px solid red;
-  border-bottom: 7px solid transparent;
-}
 #filter-button svg:hover ~ .tooltiptext {
   visibility: visible !important;
   z-index: 6000 !important;
+  opacity: 1 !important;
+  transition: all 1s;
+}
+#filter-button .tooltiptext {
+  position: absolute;
+  visibility: hidden;
+  color: white;
+  width: 4em;
+  height: 2em;
+  background: hsl(0deg, 100%, 20%);
+  border-radius: 0.5em;
+  margin-left: 9%;
+  text-align: center;
+  line-height: 2em;
+  opacity: 0;
+  transition: all 1s;
+}
+#filter-button .tooltiptext::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0.5em;
+  width: 0;
+  height: 0;
+  border-top: 0.5em solid transparent;
+  border-right: 0.8em solid hsl(0deg, 100%, 20%);
+  border-bottom: 0.5em solid transparent;
 }
 
 #filter-menu {
