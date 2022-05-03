@@ -119,12 +119,10 @@
                     </div>     
                 </div>
                 <div class="form-input tab-content" data-tabcontent="imagenes">
-                    <div class="form-item">
-                        <input type="text" name="name" id="name" placeholder="Escribe nombre de imagen">
+                    <div class="form-item-image">
+                        <input type="file" name="file" class="input-image">
+                        <img id="add-image" src="" alt="your image">
                     </div>
-                    <div class="form-item">
-                        <textarea type="text" name="description"  class="ckeditor" placeholder="Escribe descripción imagen"></textarea>
-                    </div>     
                 </div>
                 <div class="form-input tab-content" data-tabcontent="seo">
                     <div class="form-item">
@@ -132,7 +130,7 @@
                     </div>
                     <div class="form-item">
                         <textarea type="text" name="description"  class="ckeditor" placeholder="Escribe descripción seo"></textarea>
-                    </div>     
+                    </div>    
                 </div>
                 <div id="errors-container"></div>
                 <div id="popup-valid-form"></div>

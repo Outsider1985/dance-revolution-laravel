@@ -3,6 +3,7 @@ import {popup} from './popup.js';
 export let form = () => {
 
     let saveButton = document.getElementById("save-button");
+    let clearBtns = document.querySelectorAll('.edit-button');
     let forms = document.querySelectorAll(".admin-form");
 
     saveButton.addEventListener("click" , () => {
@@ -28,5 +29,17 @@ export let form = () => {
                 console.log(pair[0]+ ', ' + pair[1]); 
             }            
         });
-});
+    });
+    
+    clearBtns.forEach(clearBtn => {
+
+        clearBtn.addEventListener("click", () => {
+
+            document.getElementById('name').value = '';
+            document.getElementById('category').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+
+        });
+    });
 }

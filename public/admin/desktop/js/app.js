@@ -2343,6 +2343,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var form = function form() {
   var saveButton = document.getElementById("save-button");
+  var clearBtns = document.querySelectorAll('.edit-button');
   var forms = document.querySelectorAll(".admin-form");
   saveButton.addEventListener("click", function () {
     forms.forEach(function (form) {
@@ -2378,6 +2379,14 @@ var form = function form() {
       } finally {
         _iterator.f();
       }
+    });
+  });
+  clearBtns.forEach(function (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      document.getElementById('name').value = '';
+      document.getElementById('category').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('password').value = '';
     });
   });
 };
@@ -2464,6 +2473,29 @@ var popup = function popup(type, message) {
     popup.classList.remove('popup_is_active');
     popup.classList.remove(type);
   }, 5000);
+};
+
+/***/ }),
+
+/***/ "./resources/js/admin/desktop/readURL.js":
+/*!***********************************************!*\
+  !*** ./resources/js/admin/desktop/readURL.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "readURL": () => (/* binding */ readURL)
+/* harmony export */ });
+var readURL = function readURL() {
+  var inputImages = document.querySelectorAll('.input-image'); // if (input.files && input.files[0]) {
+  //     var reader = new FileReader();
+  //     reader.onload = function (e) {
+  //         document.getElementById("add-image").attr('src', e.target.result);
+  //     };
+  //     reader.readAsDataURL(input.files[0]);
+  // }
 };
 
 /***/ }),
@@ -20012,6 +20044,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./desktop/deleteBtn.js */ "./resources/js/admin/desktop/deleteBtn.js");
 /* harmony import */ var _desktop_editBtn_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./desktop/editBtn.js */ "./resources/js/admin/desktop/editBtn.js");
 /* harmony import */ var _desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./desktop/filterBtn.js */ "./resources/js/admin/desktop/filterBtn.js");
+/* harmony import */ var _desktop_readURL_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./desktop/readURL.js */ "./resources/js/admin/desktop/readURL.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 
@@ -20021,6 +20054,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 
 
+
+(0,_desktop_readURL_js__WEBPACK_IMPORTED_MODULE_7__.readURL)();
 (0,_desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_6__.filter)();
 (0,_desktop_editBtn_js__WEBPACK_IMPORTED_MODULE_5__.elementEdit)();
 (0,_desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__.elementDelete)();

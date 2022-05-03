@@ -138,6 +138,10 @@
     width: 100%;
 }
 
+.form-item textarea{
+    resize: none;
+}
+
 .ck-editor__editable{
     height: 21vh !important;
 }
@@ -216,4 +220,15 @@
     opacity: 0.9;
     transition: all 1s;
     z-index: 5000;
+  }
+
+  /*INPUT DE IMAGEN*/
+
+  .input-image{
+    content: "+";
+    padding: 1em;
+    width: 20%;
+    height: 10vh;
+    background:hsl(0, 0%, 20%);
+    object-fit: contain;
   }
