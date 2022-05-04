@@ -7,9 +7,9 @@ import {ckeditor} from './desktop/ckeditor.js';
 import {elementDelete} from './desktop/deleteBtn.js';
 import {elementEdit} from './desktop/editBtn.js';
 import {filter} from './desktop/filterBtn.js';
-import {readURL} from './desktop/readURL.js';
+import {imageUpload} from './desktop/imageupload.js';
 
-readURL();
+imageUpload();
 filter();
 elementEdit();
 elementDelete();
