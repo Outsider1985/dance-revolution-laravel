@@ -2393,9 +2393,9 @@ var form = function form() {
 
 /***/ }),
 
-/***/ "./resources/js/admin/desktop/imageupload.js":
+/***/ "./resources/js/admin/desktop/imageUpload.js":
 /*!***************************************************!*\
-  !*** ./resources/js/admin/desktop/imageupload.js ***!
+  !*** ./resources/js/admin/desktop/imageUpload.js ***!
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -20052,7 +20052,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./desktop/deleteBtn.js */ "./resources/js/admin/desktop/deleteBtn.js");
 /* harmony import */ var _desktop_editBtn_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./desktop/editBtn.js */ "./resources/js/admin/desktop/editBtn.js");
 /* harmony import */ var _desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./desktop/filterBtn.js */ "./resources/js/admin/desktop/filterBtn.js");
-/* harmony import */ var _desktop_imageupload_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./desktop/imageupload.js */ "./resources/js/admin/desktop/imageupload.js");
+/* harmony import */ var _desktop_imageUpload_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./desktop/imageUpload.js */ "./resources/js/admin/desktop/imageUpload.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 
@@ -20063,7 +20063,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 
 
-(0,_desktop_imageupload_js__WEBPACK_IMPORTED_MODULE_7__.imageUpload)();
+(0,_desktop_imageUpload_js__WEBPACK_IMPORTED_MODULE_7__.imageUpload)();
 (0,_desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_6__.filter)();
 (0,_desktop_editBtn_js__WEBPACK_IMPORTED_MODULE_5__.elementEdit)();
 (0,_desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__.elementDelete)();

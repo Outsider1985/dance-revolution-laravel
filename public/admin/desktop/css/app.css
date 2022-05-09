@@ -999,6 +999,10 @@ footer {
   cursor: pointer;
 }
 
+.form-input {
+  margin-bottom: 0.5em;
+}
+
 /*FORM INPUT*/
 .form-users {
   background-color: hsl(0deg, 0%, 90%);
@@ -1107,8 +1111,7 @@ footer {
 
 .image-selector {
   background-color: #fff;
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em;
   border-radius: 1em;
 }
 

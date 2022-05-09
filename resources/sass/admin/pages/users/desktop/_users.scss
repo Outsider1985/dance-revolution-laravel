@@ -125,6 +125,10 @@
     cursor: pointer;
 }
 
+.form-input{
+  margin-bottom: 0.5em;
+}
+
 /*FORM INPUT*/
 
 .form-users{
@@ -240,8 +244,7 @@
   .image-selector{
       
       background-color: #fff;
-      margin-left: 0.5em;
-      margin-bottom: 0.5em;
+      margin: 0.5em;
       border-radius: 1em;    
   }
 
@@ -260,7 +263,7 @@
   .image-svg{
     display: block;
   }
-  
+
   .image-svg.hidden{
     display: none;
   }

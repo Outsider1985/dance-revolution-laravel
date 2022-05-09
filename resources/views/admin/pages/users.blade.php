@@ -139,6 +139,16 @@
                         </div>                                             
                         <input type="file" name="choose-file" class="choose-file" accept="image/*" >
                     </div>
+                    <div class="image-selector">
+                        <label class="file-input">
+                        <div id="image-preview">
+                            <svg class="image-svg" viewBox="0 0 24 24">
+                                <path  d="M20 18H4V8H20M20 6H12L10 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H20A2 2 0 0 0 22 18V8A2 2 0 0 0 20 6M16 17H14V13H11L15 9L19 13H16Z" />
+                            </svg>
+                            <img class="image">
+                        </div>                                             
+                        <input type="file" name="choose-file" class="choose-file" accept="image/*" >
+                    </div>
                 </div>
                 <div class="form-input tab-content" data-tabcontent="seo">
                     <div class="form-item">
