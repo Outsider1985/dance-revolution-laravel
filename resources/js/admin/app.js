@@ -8,6 +8,7 @@ import {elementDelete} from './desktop/deleteBtn.js';
 import {elementEdit} from './desktop/editBtn.js';
 import {filter} from './desktop/filterBtn.js';
 import {imageUpload} from './desktop/imageUpload.js';
+import {renderTable} from './desktop/table.js';
 
 imageUpload();
 filter();
@@ -17,3 +18,4 @@ plusMinusBtns();
 tabBtns();
 form();
 ckeditor();
+renderTable();

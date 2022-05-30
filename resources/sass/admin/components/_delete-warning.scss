@@ -1,0 +1,27 @@
+  /*DELETE WARNING*/
+
+  .delete-warning-box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40vh;
+    right: 35%;
+    width: 35%;
+    height: 12vh;
+    background-color: #dc3545;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    line-height: 5vh;
+    z-index: -1;
+
+    button{
+      cursor: pointer;
+    }
+  }
+
+  .is_displayed{
+    opacity: 0.9;
+    transition: all 1s;
+    z-index: 5000;
+  }

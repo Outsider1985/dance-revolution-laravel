@@ -52,8 +52,7 @@
                 <div class="table-element">
                     <ul class="table-data">
                         <li class="user-name">Nombre:<span></span></li>
-                        <li class="user-dni">DNI:<span></span></li>
-                        <li class="user-category">Categoría:<span></span></li>
+                        <li class="user-rol">Rol:<span></span></li>
                         <li class="user-created">Creado el:<span></span></li>
                     </ul>
                     <div class="table-buttons">
@@ -106,13 +105,16 @@
                         <input type="text" name="name" id="name" placeholder="Escribe nombre de usuario">
                     </div>
                     <div class="form-item">
-                        <input type="text" name="category" id="category" placeholder="Escribe categoría de usuario"> 
+                        <input type="text" name="tel" id="tel" placeholder="Escribe teléfono de usuario"> 
                     </div>
                     <div class="form-item">
                         <input type="text" name="email" id="email" placeholder="Escribe email de usuario"> 
                     </div>
                     <div class="form-item">
                         <input type="text" name="password" placeholder="Escribe clave de usuario">
+                    </div>
+                    <div class="form-item">
+                        <input type="text" name="password" placeholder="Escribe de nuevo clave de usuario">
                     </div>
                     <div class="form-item">
                         <textarea type="text" name="description"  class="ckeditor" placeholder="Escribe descripción usuario"></textarea>
@@ -122,8 +124,11 @@
                     <div class="image-selector">
                         <label class="file-input">
                         <div id="image-preview">
-                            <svg class="image-svg" viewBox="0 0 24 24">
+                            <svg class="image-load" viewBox="0 0 24 24">
                                 <path  d="M20 18H4V8H20M20 6H12L10 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H20A2 2 0 0 0 22 18V8A2 2 0 0 0 20 6M16 17H14V13H11L15 9L19 13H16Z" />
+                            </svg>
+                            <svg class="image-delete" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
                             </svg>
                             <img class="image">
                         </div>                                             
@@ -132,8 +137,11 @@
                     <div class="image-selector">
                         <label class="file-input">
                         <div id="image-preview">
-                            <svg class="image-svg" viewBox="0 0 24 24">
+                            <svg class="image-load" viewBox="0 0 24 24">
                                 <path  d="M20 18H4V8H20M20 6H12L10 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H20A2 2 0 0 0 22 18V8A2 2 0 0 0 20 6M16 17H14V13H11L15 9L19 13H16Z" />
+                            </svg>
+                            <svg class="image-delete" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
                             </svg>
                             <img class="image">
                         </div>                                             
@@ -142,8 +150,11 @@
                     <div class="image-selector">
                         <label class="file-input">
                         <div id="image-preview">
-                            <svg class="image-svg" viewBox="0 0 24 24">
+                            <svg class="image-load" viewBox="0 0 24 24">
                                 <path  d="M20 18H4V8H20M20 6H12L10 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H20A2 2 0 0 0 22 18V8A2 2 0 0 0 20 6M16 17H14V13H11L15 9L19 13H16Z" />
+                            </svg>
+                            <svg class="image-delete" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,3H16.3H7.7H5A2,2 0 0,0 3,5V7.7V16.4V19A2,2 0 0,0 5,21H7.7H16.4H19A2,2 0 0,0 21,19V16.3V7.7V5A2,2 0 0,0 19,3M15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4L13.4,12L17,15.6L15.6,17Z" />
                             </svg>
                             <img class="image">
                         </div>                                             
