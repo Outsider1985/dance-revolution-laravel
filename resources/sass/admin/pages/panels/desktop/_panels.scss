@@ -34,6 +34,7 @@
 
 .table-buttons svg {
     color: hsl(0, 100%, 40%);
+    width:24px;height:24px;
 }
 
 .table-buttons svg:hover{
@@ -118,6 +119,8 @@
 .form-buttons svg{
     margin-right: 0.5em;
     color: hsl(0, 100%, 40%);
+    width:24px;
+    height:24px
 }
 
 .form-buttons svg:hover{
@@ -131,7 +134,7 @@
 
 /*FORM INPUT*/
 
-.form-users{
+.form{
     background-color: hsl(0, 0%, 90%);
     margin-top: 0.5em;
     padding: 1em;

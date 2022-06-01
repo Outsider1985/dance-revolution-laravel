@@ -993,6 +993,8 @@ footer {
 
 .table-buttons svg {
   color: hsl(0deg, 100%, 40%);
+  width: 24px;
+  height: 24px;
 }
 
 .table-buttons svg:hover {
@@ -1078,6 +1080,8 @@ footer {
 .form-buttons svg {
   margin-right: 0.5em;
   color: hsl(0deg, 100%, 40%);
+  width: 24px;
+  height: 24px;
 }
 
 .form-buttons svg:hover {
@@ -1090,7 +1094,7 @@ footer {
 }
 
 /*FORM INPUT*/
-.form-users {
+.form {
   background-color: hsl(0deg, 0%, 90%);
   margin-top: 0.5em;
   padding: 1em;

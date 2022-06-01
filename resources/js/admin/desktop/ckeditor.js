@@ -2,6 +2,10 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export let ckeditor = () => {
 
+    document.addEventListener("renderFormModules",( event =>{
+        renderCkeditor();
+    }), {once: true});
+
     window.ckeditors = []; //Array para guardar los comentarios.
 
     document.querySelectorAll('.ckeditor').forEach(ckeditor => {

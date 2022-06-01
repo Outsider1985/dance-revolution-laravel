@@ -8,7 +8,7 @@
                     </svg>
                 </div>  
                 <div class="title">
-                    <h1>DANCE REVOLUTION FAQs</h1>
+                    <h1>DANCE REVOLUTION ADMIN PANEL</h1>
                 </div>
             </div>
             <div id="hamburguer">

@@ -3,7 +3,6 @@
 @section("table")
 
     <div class="table">
-
         @foreach($faqs as $faq)
             <div class="table-element">
                 <ul class="table-data">
@@ -20,8 +19,8 @@
                 </div>
             </div>
         @endforeach
-
     </div>
+
     <div class="page-navigator">
         <div class="page">
             <p id = "registers"><span>X</span> registros</p>
@@ -40,8 +39,7 @@
 @endsection
 
 @section("form")
-       
-    <form action="{{route('faqs_store')}}" class="admin-form" id="user-form" autocomplete="off">
+    <form action="{{route('faqs')}}" class="admin-form" id="user-form" autocomplete="off">
         <div class="form-header">
             <ul class="form-tabs">
                 <li class="form-tab is_selected" data-tabtrigger="contenido">Contenido</li>

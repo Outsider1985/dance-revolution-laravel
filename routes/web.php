@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /*
-    Dentro de resouruce( 'usuarios') "usuarios" significa lo que tendremos que escribir en la url para entrar en la página, 
+    Dentro de resource( 'usuarios') "usuarios" significa lo que tendremos que escribir en la url para entrar en la página, 
     en este caso tendremos que escribir www.dev-asociacion-mascotas.com/admin/usuarios
     Tendremos que decir también que controlador queremos cargar, en este caso el controlador que estamos cargando se llama
     "UserController" y se encuentra dentro de la carpeta /app/http/controllers/admin
@@ -38,23 +38,20 @@ use Illuminate\Support\Facades\Route;
     - destroy será una llamada de tipo DELETE
         -- En destroy lo que haremos es borrar un dato de la base de datos 
     */
-    Route::group(['prefix' => 'admin'], function () {
-        Route::resource('users', 'App\Http\Controllers\Admin\UserController', [
-            'parameters' => [
-                'users' => 'user', 
-            ],
-            'names' => [
-                'index' => 'users',
-                'create' => 'users_create',
-                'edit' => 'users_edit',
-                'store' => 'users_store',
-                'destroy' => 'users_destroy',
-                'show' => 'users_show',
-            ]
-        ]);
-    });
-
 Route::group(['prefix' => 'admin'], function () {
+    Route::resource('users', 'App\Http\Controllers\Admin\UserController', [
+        'parameters' => [
+            'users' => 'user', 
+        ],
+        'names' => [
+            'index' => 'users', 
+            'create' => 'users_create',
+            'edit' => 'users_edit',
+            'store' => 'users_store',
+            'destroy' => 'users_destroy',
+            'show' => 'users_show',
+        ]
+    ]);
 
     Route::resource('faqs', 'App\Http\Controllers\Admin\FaqController', [
         'parameters' => [
@@ -69,10 +66,6 @@ Route::group(['prefix' => 'admin'], function () {
             'show' => 'faqs_show',
         ]
     ]);
-});
-
-Route::get('/admin/users', function () {
-    return view('admin.pages.users');
 });
 
 Route::get('/admin/login', function () {

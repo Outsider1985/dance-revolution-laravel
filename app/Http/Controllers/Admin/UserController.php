@@ -79,7 +79,7 @@ class UserController extends Controller
             tiene como valor todos los registros de la tabla usuarios. Para pedir todos los datos hemos escrito: $this->user->get();
         */
 
-        $view = View::make('admin.pages.usuarios.index')
+        $view = View::make('admin.pages.users')
                 ->with('user', $this->user)
                 ->with('users', $this->user->where('active', 1)->get());
 
@@ -107,7 +107,7 @@ class UserController extends Controller
             con los datos procesados. 
         */
 
-       $view = View::make('admin.pages.usuarios.index')
+       $view = View::make('admin.pages.users')
         ->with('user', $this->user)
         ->renderSections();
 
@@ -143,6 +143,7 @@ class UserController extends Controller
             $user = $this->user->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
+                'tel' => request('tel'),
                 'email' => request('email'),
                 'password' => bcrypt(request('password')),
                 'active' => 1,
@@ -153,12 +154,13 @@ class UserController extends Controller
             $user = $this->user->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
+                'tel' => request('tel'),
                 'email' => request('email'),
                 'active' => 1,
             ]);
         }
 
-        $view = View::make('admin.pages.usuarios.index')
+        $view = View::make('admin.pages.users')
         ->with('users', $this->user->where('active', 1)->get())
         ->with('user', $this->user)
         ->renderSections();        
@@ -171,7 +173,7 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
-        $view = View::make('admin.pages.usuarios.index')
+        $view = View::make('admin.pages.users')
         ->with('user', $user)
         ->with('users', $this->user->where('active', 1)->get());   
         
@@ -196,7 +198,7 @@ class UserController extends Controller
         $user->active = 0;
         $user->save();
 
-        $view = View::make('admin.pages.usuarios.index')
+        $view = View::make('admin.pages.users')
             ->with('user', $this->user)
             ->with('users', $this->user->where('active', 1)->get())
             ->renderSections();
