@@ -954,6 +954,20 @@ footer {
 
 .is_displayed {
   opacity: 0.9;
-  transition: all 1s;
-  z-index: 5000;
+  z-index: 10000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9000;
+  display: none;
+}
+
+.overlay.blur {
+  display: block;
 }

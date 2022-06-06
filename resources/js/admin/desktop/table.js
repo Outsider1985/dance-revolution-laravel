@@ -12,7 +12,8 @@ export let renderTable = () => {
         // setTimeout(function(){
         //     table.classList.remove('table-hide');
         // }, 500)
-    }));
+    }), {once: true});
+
 
     document.addEventListener("renderTableModules",( event =>{
         renderTable();
@@ -28,7 +29,7 @@ export let renderTable = () => {
 
                 let sendEditRequest = async () => {
     
-                    document.dispatchEvent(new CustomEvent('startWait'));
+                    //document.dispatchEvent(new CustomEvent('startWait'));
                     
                     let response = await fetch(url, {
                         headers: {
@@ -51,11 +52,11 @@ export let renderTable = () => {
                         }));
 
                         document.dispatchEvent(new CustomEvent('renderFormModules'));
-                        document.dispatchEvent(new CustomEvent('stopWait'));
+                        //document.dispatchEvent(new CustomEvent('stopWait'));
                     })
                     .catch(error =>  {
     
-                        document.dispatchEvent(new CustomEvent('stopWait'));
+                        //document.dispatchEvent(new CustomEvent('stopWait'));
     
                         if(error.status == '500'){
                             console.log(error);

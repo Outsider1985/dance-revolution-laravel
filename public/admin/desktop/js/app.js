@@ -2231,7 +2231,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ckeditor = function ckeditor() {
   document.addEventListener("renderFormModules", function (event) {
-    renderCkeditor();
+    ckeditor();
   }, {
     once: true
   });
@@ -2249,33 +2249,6 @@ var ckeditor = function ckeditor() {
       ckeditors[ckeditor.name] = classicEditor; //Agregamos a cada comentario su etiqueta de name.
     })["catch"](function (error) {
       console.error(error);
-    });
-  });
-};
-
-/***/ }),
-
-/***/ "./resources/js/admin/desktop/deleteBtn.js":
-/*!*************************************************!*\
-  !*** ./resources/js/admin/desktop/deleteBtn.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "elementDelete": () => (/* binding */ elementDelete)
-/* harmony export */ });
-var elementDelete = function elementDelete() {
-  var deleteBtns = document.querySelectorAll('.delete-button');
-  var deleteWarningBox = document.getElementById("delete-warning-box");
-  var cancelButton = document.getElementById("cancel-button");
-  deleteBtns.forEach(function (deleteBtn) {
-    deleteBtn.addEventListener("click", function () {
-      deleteWarningBox.classList.add("is_displayed");
-    });
-    cancelButton.addEventListener("click", function () {
-      deleteWarningBox.classList.remove("is_displayed");
     });
   });
 };
@@ -2312,73 +2285,247 @@ var filter = function filter() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "form": () => (/* binding */ form)
+/* harmony export */   "renderForm": () => (/* binding */ renderForm)
 /* harmony export */ });
-/* harmony import */ var _popup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./popup.js */ "./resources/js/admin/desktop/popup.js");
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _popup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./popup.js */ "./resources/js/admin/desktop/popup.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-var form = function form() {
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+var renderForm = function renderForm() {
+  var formContainer = document.querySelector(".form-container");
   var saveButton = document.getElementById("save-button");
-  var cleanBtns = document.querySelectorId("clean-button");
-  var forms = document.querySelectorAll(".admin-form");
-  saveButton.addEventListener("click", function () {
-    forms.forEach(function (form) {
-      var data = new FormData(form); //Condicional de valor no nulo para agregarlos al array de comentarios.
+  var cleanButton = document.getElementById("clean-button");
+  var forms = document.querySelectorAll('.admin-form');
+  document.addEventListener("loadForm", function (event) {
+    console.log(event.detail.form);
+    formContainer.innerHTML = event.detail.form;
+  });
+  document.addEventListener("renderFormModules", function (event) {
+    renderForm();
+  }, {
+    once: true
+  });
 
-      if (ckeditors != 'null') {
-        //Agregamos los comentarios y sus etiquetas de atributo name a cada posición del array con append()
-        Object.entries(ckeditors).forEach(function (_ref) {
-          var _ref2 = _slicedToArray(_ref, 2),
-              key = _ref2[0],
-              value = _ref2[1];
+  if (cleanButton) {
+    cleanButton.addEventListener("click", function () {
+      var url = cleanButton.dataset.url;
+      /* 
+          A continuación vamos a hacer una llamada de tipo fetch, utilizando el método GET. Una llamada fetch es una
+          promesa, y una promesa es una llamada que puede estar en estado pendiente, cumplida o rechazada. Para ello estamos
+          diciendo que sendCreateRequest que es una función será asincrona, y se quedará esperando la respuesta de la
+          llamada. que es el fetch que tiene un await.
+      */
 
-          data.append(key, value.getData());
-        }); //llamamos a la función que crea un mensaje de éxito.
+      var sendCreateRequest = /*#__PURE__*/function () {
+        var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    formContainer.innerHTML = json.form;
+                    /*
+                        Cuando hacemos un innerHTML se pierden todos los eventos de javascript, por lo que tenemos que
+                        volver a asignar los eventos a los elementos que hemos creado. Para ello vamos a hacer un evento 
+                        personalizado, que será el evento que cargará todo el javascript que tenga el formulario. 
+                        En la siguiente línea estamos declarando un evento personalizado que se llamará 'renderFormModules' que 
+                        podrá ser escuchado por el resto de archivos. 
+                    */
 
-        (0,_popup_js__WEBPACK_IMPORTED_MODULE_0__.popup)('success', 'Usuario guardado correctamente');
-      } else {
-        //llamamos a la función que crea un mensaje de fracaso.
-        (0,_popup_js__WEBPACK_IMPORTED_MODULE_0__.popup)('error', 'Revise el formulario');
-      } //imprimimos en consola todos los datos del formulario.
+                    /*
+                        Cuando hacemos un innerHTML se pierden todos los eventos de javascript, por lo que tenemos que
+                        volver a asignar los eventos a los elementos que hemos creado. Para ello vamos a hacer un evento 
+                        personalizado, que será el evento que cargará todo el javascript que tenga el formulario. 
+                        En la siguiente línea estamos declarando un evento personalizado que se llamará 'renderFormModules' que 
+                        podrá ser escuchado por el resto de archivos. 
+                    */
+                    document.dispatchEvent(new CustomEvent('renderFormModules')); // document.dispatchEvent(new CustomEvent('stopWait'));
+                  })["catch"](function (error) {
+                    // document.dispatchEvent(new CustomEvent('stopWait'));
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
 
+                    ;
+                  });
 
-      var _iterator = _createForOfIteratorHelper(data.entries()),
-          _step;
+                case 2:
+                  response = _context.sent;
 
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var pair = _step.value;
-          console.log(pair[0] + ', ' + pair[1]);
+                case 3:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee);
+        }));
+
+        return function sendCreateRequest() {
+          return _ref.apply(this, arguments);
+        };
+      }();
+
+      sendCreateRequest();
+    });
+  }
+
+  if (saveButton) {
+    saveButton.addEventListener("click", function (event) {
+      forms.forEach(function (form) {
+        /*
+            En las siguientes líneas se obtiene el valor del formulario a través de un objeto FormData
+            y se captura la url que usaremos para enviar los datos al servidor.
+        */
+        var data = new FormData(form);
+        var url = form.action;
+
+        var _iterator = _createForOfIteratorHelper(data.entries()),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var pair = _step.value;
+            console.log(pair[0] + ', ' + pair[1]);
+          }
+          /*	
+              En el siguiente valor estamos capturando los datos del ckeditor y se los añadimos a los datos
+              del formData. 
+          */
+
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
         }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
+
+        if (ckeditors != 'null') {
+          Object.entries(ckeditors).forEach(function (_ref2) {
+            var _ref3 = _slicedToArray(_ref2, 2),
+                key = _ref3[0],
+                value = _ref3[1];
+
+            data.append(key, value.getData());
+          });
+        }
+        /*
+            A continuación vamos a hacer una llamada de tipo POST mediante fetch, esta vez vamos a 
+            añadir en los headers el token que nos ha dado Laravel el cual va a prevenir que se puedan 
+            hacer ataques de tipos cross-site scripting.
+        */
+
+
+        var sendPostRequest = /*#__PURE__*/function () {
+          var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+            var response;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
+                    return fetch(url, {
+                      headers: {
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
+                      },
+                      method: 'POST',
+                      body: data
+                    }).then(function (response) {
+                      if (!response.ok) throw response;
+                      return response.json();
+                    }).then(function (json) {
+                      formContainer.innerHTML = json.form;
+                      document.dispatchEvent(new CustomEvent('loadTable', {
+                        detail: {
+                          table: json.table
+                        }
+                      }));
+                      (0,_popup_js__WEBPACK_IMPORTED_MODULE_1__.popup)('success', 'Usuario guardado correctamente');
+                      document.dispatchEvent(new CustomEvent('renderFormModules'));
+                      document.dispatchEvent(new CustomEvent('renderTableModules')); // document.dispatchEvent(new CustomEvent('stopWait'));
+                      // document.dispatchEvent(new CustomEvent('stopOverlay'));
+                      // document.dispatchEvent(new CustomEvent('message', {
+                      //     detail: {
+                      //         message: json.message,
+                      //         type: 'success'
+                      //     }
+                      // }));
+                    })["catch"](function (error) {
+                      (0,_popup_js__WEBPACK_IMPORTED_MODULE_1__.popup)('error', 'Revise el formulario'); // document.dispatchEvent(new CustomEvent('stopWait'));
+
+                      // document.dispatchEvent(new CustomEvent('stopWait'));
+                      if (error.status == '422') {
+                        error.json().then(function (jsonError) {
+                          var errors = jsonError.errors;
+                          var errorMessage = '';
+                          Object.keys(errors).forEach(function (key) {
+                            errorMessage += '<li>' + errors[key] + '</li>';
+                          });
+                          document.dispatchEvent(new CustomEvent('message', {
+                            detail: {
+                              message: errorMessage,
+                              type: 'error'
+                            }
+                          }));
+                        });
+                      }
+
+                      if (error.status == '500') {
+                        console.log(error);
+                      }
+
+                      ;
+                    });
+
+                  case 2:
+                    response = _context2.sent;
+
+                  case 3:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2);
+          }));
+
+          return function sendPostRequest() {
+            return _ref4.apply(this, arguments);
+          };
+        }();
+
+        sendPostRequest();
+      });
     });
-  });
-  cleanBtns.forEach(function (cleanBtn) {
-    cleanBtn.addEventListener("click", function () {
-      document.getElementById('name').value = '';
-      document.getElementById('tel').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('password').value = '';
-      document.getElementById('password-confirmation').value = '';
-    });
-  });
+  }
 };
 
 /***/ }),
@@ -2419,6 +2566,117 @@ var imageUpload = function imageUpload() {
       deleteFile.closest('.image-selector').querySelector('.image').src = '';
       event.preventDefault();
     });
+  });
+};
+
+/***/ }),
+
+/***/ "./resources/js/admin/desktop/modalDelete.js":
+/*!***************************************************!*\
+  !*** ./resources/js/admin/desktop/modalDelete.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderModalDelete": () => (/* binding */ renderModalDelete)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var renderModalDelete = function renderModalDelete() {
+  var modalDelete = document.querySelector('.delete-warning-box');
+  var deleteConfirm = document.getElementById('delete-confirmation-button');
+  var deleteCancel = document.getElementById('delete-cancel-button');
+  var overlay = document.querySelector('.overlay');
+  document.addEventListener("openModalDelete", function (event) {
+    deleteConfirm.dataset.url = event.detail.url;
+    modalDelete.classList.add('is_displayed');
+    overlay.classList.add('blur');
+  });
+  deleteCancel.addEventListener("click", function () {
+    modalDelete.classList.remove('is_displayed');
+    overlay.classList.remove('blur');
+  });
+  deleteConfirm.addEventListener("click", function () {
+    var url = deleteConfirm.dataset.url;
+    console.log(url);
+
+    var sendDeleteRequest = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return fetch(url, {
+                  headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
+                  },
+                  method: 'DELETE'
+                }).then(function (response) {
+                  if (!response.ok) throw response;
+                  return response.json();
+                }).then(function (json) {
+                  if (json.table) {
+                    document.dispatchEvent(new CustomEvent('loadTable', {
+                      detail: {
+                        table: json.table
+                      }
+                    }));
+                  }
+
+                  document.dispatchEvent(new CustomEvent('loadForm', {
+                    detail: {
+                      form: json.form
+                    }
+                  }));
+                  modalDelete.classList.remove('is_displayed');
+                  document.dispatchEvent(new CustomEvent('renderFormModules'));
+                  document.dispatchEvent(new CustomEvent('renderTableModules'));
+                  overlay.classList.remove('blur'); // document.dispatchEvent(new CustomEvent('stopWait'));
+
+                  // document.dispatchEvent(new CustomEvent('stopWait'));
+                  document.dispatchEvent(new CustomEvent('message', {
+                    detail: {
+                      message: json.message,
+                      type: 'success'
+                    }
+                  }));
+                })["catch"](function (error) {
+                  // document.dispatchEvent(new CustomEvent('stopWait'));
+                  if (error.status == '500') {
+                    console.log(error);
+                  }
+
+                  ;
+                });
+
+              case 2:
+                response = _context.sent;
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function sendDeleteRequest() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    sendDeleteRequest();
   });
 };
 
@@ -2567,6 +2825,8 @@ var renderTable = function renderTable() {
     tableContainer.innerHTML = event.detail.table; // setTimeout(function(){
     //     table.classList.remove('table-hide');
     // }, 500)
+  }, {
+    once: true
   });
   document.addEventListener("renderTableModules", function (event) {
     renderTable();
@@ -2586,8 +2846,7 @@ var renderTable = function renderTable() {
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    document.dispatchEvent(new CustomEvent('startWait'));
-                    _context.next = 3;
+                    _context.next = 2;
                     return fetch(url, {
                       headers: {
                         'X-Requested-With': 'XMLHttpRequest'
@@ -2602,11 +2861,9 @@ var renderTable = function renderTable() {
                           form: json.form
                         }
                       }));
-                      document.dispatchEvent(new CustomEvent('renderFormModules'));
-                      document.dispatchEvent(new CustomEvent('stopWait'));
+                      document.dispatchEvent(new CustomEvent('renderFormModules')); //document.dispatchEvent(new CustomEvent('stopWait'));
                     })["catch"](function (error) {
-                      document.dispatchEvent(new CustomEvent('stopWait'));
-
+                      //document.dispatchEvent(new CustomEvent('stopWait'));
                       if (error.status == '500') {
                         console.log(error);
                       }
@@ -2614,10 +2871,10 @@ var renderTable = function renderTable() {
                       ;
                     });
 
-                  case 3:
+                  case 2:
                     response = _context.sent;
 
-                  case 4:
+                  case 3:
                   case "end":
                     return _context.stop();
                 }
@@ -20925,7 +21182,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _desktop_tabBtns_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./desktop/tabBtns.js */ "./resources/js/admin/desktop/tabBtns.js");
 /* harmony import */ var _desktop_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./desktop/form.js */ "./resources/js/admin/desktop/form.js");
 /* harmony import */ var _desktop_ckeditor_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./desktop/ckeditor.js */ "./resources/js/admin/desktop/ckeditor.js");
-/* harmony import */ var _desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./desktop/deleteBtn.js */ "./resources/js/admin/desktop/deleteBtn.js");
+/* harmony import */ var _desktop_modalDelete_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./desktop/modalDelete.js */ "./resources/js/admin/desktop/modalDelete.js");
 /* harmony import */ var _desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./desktop/filterBtn.js */ "./resources/js/admin/desktop/filterBtn.js");
 /* harmony import */ var _desktop_imageUpload_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./desktop/imageUpload.js */ "./resources/js/admin/desktop/imageUpload.js");
 /* harmony import */ var _desktop_table_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./desktop/table.js */ "./resources/js/admin/desktop/table.js");
@@ -20941,12 +21198,12 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 (0,_desktop_imageUpload_js__WEBPACK_IMPORTED_MODULE_6__.imageUpload)();
 (0,_desktop_filterBtn_js__WEBPACK_IMPORTED_MODULE_5__.filter)();
-(0,_desktop_deleteBtn_js__WEBPACK_IMPORTED_MODULE_4__.elementDelete)();
 (0,_desktop_plusMinusBtns_js__WEBPACK_IMPORTED_MODULE_0__.plusMinusBtns)();
 (0,_desktop_tabBtns_js__WEBPACK_IMPORTED_MODULE_1__.tabBtns)();
-(0,_desktop_form_js__WEBPACK_IMPORTED_MODULE_2__.form)();
 (0,_desktop_ckeditor_js__WEBPACK_IMPORTED_MODULE_3__.ckeditor)();
+(0,_desktop_form_js__WEBPACK_IMPORTED_MODULE_2__.renderForm)();
 (0,_desktop_table_js__WEBPACK_IMPORTED_MODULE_7__.renderTable)();
+(0,_desktop_modalDelete_js__WEBPACK_IMPORTED_MODULE_4__.renderModalDelete)();
 })();
 
 /******/ })()

@@ -3,6 +3,7 @@ export let tabBtns = () => {
   let tabBtns = document.querySelectorAll('.form-tab');
   let tabContents = document.querySelectorAll('.tab-content');
 
+
   tabBtns.forEach(tabBtn => {
 
     tabBtn.addEventListener('click', function(){

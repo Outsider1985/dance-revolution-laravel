@@ -131,6 +131,8 @@ class UserController extends Controller
             A continuación, en este caso, vamos comprobar si el input con el name password tiene un valor. Si 
         */
 
+        Debugbar::info(request('telephone'));
+
         if (request('password') !== null) {
 
             /*
@@ -143,9 +145,10 @@ class UserController extends Controller
             $user = $this->user->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
-                'tel' => request('tel'),
+                'telephone' => request('telephone'),
                 'email' => request('email'),
                 'password' => bcrypt(request('password')),
+                'description' => request('description'),
                 'active' => 1,
             ]);
             
@@ -154,8 +157,9 @@ class UserController extends Controller
             $user = $this->user->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
-                'tel' => request('tel'),
+                'telephone' => request('telephone'),
                 'email' => request('email'),
+                'description' => request('description'),
                 'active' => 1,
             ]);
         }
