@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('faqs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('title');
             $table->text('question');
             $table->text('answer');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

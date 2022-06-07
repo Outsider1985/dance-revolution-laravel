@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\View;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+//use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Faq; 
+use App\Models\Faq;
+use App\Http\Requests\Admin\FaqRequest;
 use Debugbar;
 
 class FaqController extends Controller
@@ -21,7 +23,7 @@ class FaqController extends Controller
     {
         $view = View::make('admin.pages.faqs')
         ->with('faq', $this->faq)
-        ->with('faqs', $this->faq->orderBy('created_at', 'desc')->get());
+        ->with('faqs', $this->faq->where('active', 1)->get());
     
         if(request()->ajax()) {
             
@@ -38,7 +40,7 @@ class FaqController extends Controller
 
     public function create()
     {
-        $view = View::make('admin.faqs.index')
+        $view = View::make('admin.pages.faqs')
         ->with('faq', $this->faq)
         ->renderSections();
 
@@ -47,21 +49,21 @@ class FaqController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(FaqRequest $request)
     {            
                 
         $faq = $this->faq->updateOrCreate([
             'id' => request('id')],[
-            'nombre' => request('name'),
-            'titulo' => request('title'),
-            'cuestion' => request('question'),
-            'respuesta' => request('answer'),
+            'title' => request('title'),
+            'question' => request('question'),
+            'answer' => request('answer'),
+            'active' => 1,
         ]);
 
-        $view = View::make('admin.faqs.index')
-        ->with('faqs', $this->faq->orderBy('created_at', 'desc'))
+        $view = View::make('admin.pages.faqs')
+        ->with('faqs', $this->faq->where('active', 1)->get())
         ->with('faq', $this->faq)
-        ->renderSections();        
+        ->renderSections();
 
         return response()->json([
             'table' => $view['table'],
@@ -72,16 +74,15 @@ class FaqController extends Controller
     public function edit(Faq $faq)
     {
 
-        $view = View::make('admin.faqs.index')
+        $view = View::make('admin.pages.faqs')
         ->with('faq', $faq)
-        ->with('faqs', $this->faq->orderBy('created_at', 'desc'));        
+        ->with('faqs', $this->faq->where('active', 1)->get());        
         
         if(request()->ajax()) {
 
             $sections = $view->renderSections(); 
     
             return response()->json([
-                'table' => $sections['table'],
                 'form' => $sections['form'],
             ]); 
         }
@@ -91,7 +92,7 @@ class FaqController extends Controller
 
     public function show(Faq $faq){
 
-        $view = View::make('admin.faqs.index')
+        $view = View::make('admin.pages.faqs')
         ->with('faq', $faq)
         ->with('faqs', $this->faq->orderBy('created_at', 'desc'))
         ->renderSections();        
@@ -104,17 +105,17 @@ class FaqController extends Controller
 
     public function destroy(Faq $faq)
     {
-        $faq->delete();
+        $faq->active = 0;
+        $faq->save();
 
-        $view = View::make('admin.faqs.index')
-        ->with('faq', $this->faq)
-        ->with('faqs', $this->faq->orderBy('created_at', 'desc'))
-        ->renderSections();        
-
+        $view = View::make('admin.pages.faqs')
+            ->with('faq', $this->faq)
+            ->with('faqs', $this->faq->where('active', 1)->get())
+            ->renderSections();
+        
         return response()->json([
             'table' => $view['table'],
-            'form' => $view['form'],
-            'message' => $message
+            'form' => $view['form']
         ]);
     }
 }

@@ -2290,6 +2290,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _popup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./popup.js */ "./resources/js/admin/desktop/popup.js");
+/* harmony import */ var _tabBtns_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabBtns.js */ "./resources/js/admin/desktop/tabBtns.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2311,6 +2312,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
+
 var renderForm = function renderForm() {
   var formContainer = document.querySelector(".form-container");
   var saveButton = document.getElementById("save-button");
@@ -2322,6 +2324,7 @@ var renderForm = function renderForm() {
   });
   document.addEventListener("renderFormModules", function (event) {
     renderForm();
+    (0,_tabBtns_js__WEBPACK_IMPORTED_MODULE_2__.tabBtns)();
   }, {
     once: true
   });

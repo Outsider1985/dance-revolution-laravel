@@ -1,4 +1,5 @@
 import {popup} from './popup.js';
+import {tabBtns} from './tabBtns.js';
 
 export let renderForm = () => {
 
@@ -16,6 +17,7 @@ export let renderForm = () => {
 
     document.addEventListener("renderFormModules",( event =>{
         renderForm();
+        tabBtns();
     }), {once: true});
 
     

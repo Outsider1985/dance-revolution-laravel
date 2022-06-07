@@ -131,8 +131,6 @@ class UserController extends Controller
             A continuación, en este caso, vamos comprobar si el input con el name password tiene un valor. Si 
         */
 
-        Debugbar::info(request('telephone'));
-
         if (request('password') !== null) {
 
             /*
@@ -194,6 +192,16 @@ class UserController extends Controller
     }
 
     public function show(User $user){
+    
+        $view = View::make('admin.pages.users')
+        ->with('user', $user)
+        ->with('users', $this->user->orderBy('created_at', 'desc'))
+        ->renderSections();        
+
+        return response()->json([
+            'table' => $view['table'],
+            'form' => $view['form'],
+        ]);
 
     }
 

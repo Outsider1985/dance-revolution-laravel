@@ -6,11 +6,11 @@
             @foreach($users as $user_element)
             <div class="table-element">
                 <ul class="table-data">
-                    <li class="user-name">id: <span>{{$user_element->id}}</span></li>
-                    <li class="user-name">Nombre: <span>{{$user_element->name}}</span></li>
-                    <li class="user-name">Tel: <span>{{$user_element->telephone}}</span></li>
-                    <li class="user-name">Email: <span>{{$user_element->email}}</span></li>
-                    <li class="user-created">Creado el: <span>{{$user_element->created_at}}</span></li>
+                    <li class="table-item">id: <span>{{$user_element->id}}</span></li>
+                    <li class="table-item">Nombre: <span>{{$user_element->name}}</span></li>
+                    <li class="table-item">Tel: <span>{{$user_element->telephone}}</span></li>
+                    <li class="table-item">Email: <span>{{$user_element->email}}</span></li>
+                    <li class="table-item">Creado el: <span>{{$user_element->created_at}}</span></li>
                 </ul>
                 <div class="table-buttons">
                     <svg class="edit-button" data-url="{{route('users_edit', ['user' => $user_element->id])}}" viewBox="0 0 24 24">

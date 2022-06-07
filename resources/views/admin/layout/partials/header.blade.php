@@ -18,9 +18,9 @@
             </div>
             <div class="menu" id="menubar">
                 <ul>
-                    <li><a href="/usuarios">Usuario</a></li>
-                    <li><a href="/faqs">FAQs</a></li>
-                    <li><a href="/productos">Cursos</a></li>
+                    <li><a href="/admin/users">Usuario</a></li>
+                    <li><a href="/admin/faqs">FAQs</a></li>
+                    <li><a href="/admin/products">Cursos</a></li>
                 </ul>
             </div>    
         </div>
