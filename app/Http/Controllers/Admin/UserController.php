@@ -109,6 +109,7 @@ class UserController extends Controller
 
        $view = View::make('admin.pages.users')
         ->with('user', $this->user)
+        ->with('users', $this->user->where('active', 1)->get())
         ->renderSections();
 
         /*
